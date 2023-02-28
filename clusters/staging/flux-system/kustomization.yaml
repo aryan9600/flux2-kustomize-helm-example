@@ -17,3 +17,10 @@ patches:
     target:
       kind: Deployment
       name: "(kustomize-controller|helm-controller|source-controller)"
+  - patch: |
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --default-service-account=applier
+    target:
+      kind: Deployment
+      name: kustomize-controller
