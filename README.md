@@ -127,7 +127,7 @@ spec:
         - host: podinfo.staging
 ```
 
-Note that with ` version: ">=1.0.0-alpha"` we configure Flux to automatically upgrade
+Note that with `version: ">=1.0.0-alpha"` we configure Flux to automatically upgrade
 the `HelmRelease` to the latest chart version including alpha, beta and pre-releases.
 
 In **apps/production/** dir we have a Kustomize patch with the production specific values:
@@ -148,7 +148,7 @@ spec:
         - host: podinfo.production
 ```
 
-Note that with ` version: ">=1.0.0"` we configure Flux to automatically upgrade
+Note that with `version: ">=1.0.0"` we configure Flux to automatically upgrade
 the `HelmRelease` to the latest stable chart version (alpha, beta and pre-releases will be ignored).
 
 ### Infrastructure
